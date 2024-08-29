@@ -1,0 +1,4 @@
+   *                1 etoiles 3 espaces
+  ***               3 etoiles 2 espaces
+ *****              5 etoiles 1 espace
+*******             7 etoiles 0 espace
