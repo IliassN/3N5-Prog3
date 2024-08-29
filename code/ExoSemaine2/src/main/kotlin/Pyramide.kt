@@ -8,7 +8,7 @@ fun main(args : Array<String>){
     }
 
 
-    
+
 
 }
 fun pyramide(hauteur : Int){
