@@ -14,13 +14,5 @@ fun main(args: Array<String>){
     else{
         println("Le fichier $nomFichier n'existe pas!")
     }
-    if(fichier2.exists())
-    {
-        var texte2 = fichier2.readText()
-        println(texte2)
-    }
-    else
-    {
-        println("Le fichier $nomFichier2 n'existe pas!")
-    }
+
 }

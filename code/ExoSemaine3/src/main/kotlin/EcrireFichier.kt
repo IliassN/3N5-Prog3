@@ -6,13 +6,10 @@ fun main(args: Array<String>){
     if(!fichier.exists())
     {
         fichier.createNewFile()
+        fichier.writeText(args[1])
 
     }
-    var fichierParent = File("IliasNafile.txt")
-    if(!fichierParent.exists())
-    {
-        fichierParent.createNewFile()
-    }
+
 
 
 }
