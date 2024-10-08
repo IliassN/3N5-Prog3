@@ -7,7 +7,7 @@ import com.example.activitenavigation.databinding.ActivityArticleBinding
 import com.example.activitenavigation.databinding.ActivityContactBinding
 import com.example.activitenavigation.databinding.ActivityMainBinding
 
-class ContactActivity: AppCompatActivity() {
+class Contact: AppCompatActivity() {
 
     private lateinit var binding : ActivityContactBinding
 
