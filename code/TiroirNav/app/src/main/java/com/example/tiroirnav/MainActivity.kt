@@ -3,6 +3,7 @@ package com.example.tiroirnav
 import android.content.res.Configuration
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
@@ -23,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setupDrawer()
-        title = "Accueil"
+
     }
 
     private fun setupDrawer() {
@@ -40,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         // R.string.ouvert et R.string.ferme sont des strings de ressource.
         // Référez-vous à la recette pour les strings de ressource pour voir comment les ajouter :
         // https://info.cegepmontpetit.ca/3N5-Prog3/recettes/ressources-string
-        actionBarDrawerToggle = ActionBarDrawerToggle(this, binding.dlTiroir, R.string.ouvert, R.string.ferme)
+        actionBarDrawerToggle = ActionBarDrawerToggle(this, binding.dlTiroir, R.string.ouvert , R.string.ferme)
 
         // Faire en sorte que le menu hamburger se transforme en flèche au clic, et vis versa
         binding.dlTiroir.addDrawerListener(actionBarDrawerToggle)
@@ -52,16 +53,14 @@ class MainActivity : AppCompatActivity() {
         binding.nvTiroir.setNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.accueil_item -> {
-                    Snackbar.make(binding.root, "On va à l'accueil!", Snackbar.LENGTH_SHORT).show()
+                    System.exit(0);
                 }
                 R.id.ajouter_item -> {
-                    Snackbar.make(
-                        binding.root, "On va ajouter quelque chose!", Snackbar.LENGTH_SHORT
-                    ).show()
+                    Toast.makeText(this, "Profil", Toast.LENGTH_SHORT).show()
                 }
                 R.id.rechercher_item -> {
                     Snackbar.make(
-                        binding.root, "On va chercher quelquen chose!", Snackbar.LENGTH_SHORT
+                        binding.root, "Vous êtes déconnecté", Snackbar.LENGTH_SHORT
                     ).show()
                 }
             }
